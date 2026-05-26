@@ -1893,7 +1893,7 @@ async function callClaude(prompt, maxTokens) {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        model: 'claude-3-5-sonnet-20241022',
+        model: 'claude-opus-4-5',
         max_tokens: maxTokens || 400,
         messages: [{role: 'user', content: prompt}]
       })
@@ -3429,7 +3429,7 @@ function qchatEnviar(texto) {
   msgs.scrollTop = msgs.scrollHeight;
 
   var payload = JSON.stringify({
-    model: 'claude-3-5-sonnet-20241022',
+    model: 'claude-opus-4-5',
     max_tokens: 900,
     system: SYSTEM,
     messages: window._qhist
