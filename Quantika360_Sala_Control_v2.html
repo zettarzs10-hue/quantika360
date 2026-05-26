@@ -3436,8 +3436,7 @@ function qchatEnviar(texto) {
   });
 
   // Proxy CORS para funcionar desde cualquier origen
-  var proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://api.anthropic.com/v1/messages');
-  fetch(proxyUrl, {
+  fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
